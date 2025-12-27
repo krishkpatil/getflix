@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cccccc;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+main {
+  background-color: #e6e6e6;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  font-family: "Sen", sans-serif;
+}
+
+.logo-container {
+  margin-top: 9px;
+  flex: 1;
+}
+
+.menu-container {
+  flex: 6;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.search-container {
+  flex: 2;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 10px;
+}
+
+.search::placeholder {
+  color: #e50914;
+}
+
+.search:focus {
+  background-color: #e6e6e6;
+  outline: none;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: #ecececf1;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: goldenrod;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+
+.movie {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 270px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: #22254b;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+}
+.movie-info span.green {
+  color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: rgb(189, 42, 42);
+}
+
+.overview {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  position: absolute;
+  max-height: 100%;
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+  margin-top: 0;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.navbar.active {
+  background-color: rgb(0, 0, 0);
+}
+
+.search.active {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 10px;
+}
+
+.search:focus.active {
+  background-color: rgb(25, 25, 25);
+  outline: none;
+}
+
+main.active {
+  background-color: rgb(25, 25, 25);
+}
+
+.movie.active {
+  color: white;
+}
+
+.overview.active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+.toggle-ball.active {
+  background-color: rgb(255, 255, 255);
+  transform: translate(-20px);
+}
