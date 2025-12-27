@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
