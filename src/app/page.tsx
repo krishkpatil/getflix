@@ -22,42 +22,45 @@ export default async function Home({ searchParams }: HomeProps) {
 
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-t from-netflix-black via-netflix-black/60 to-netflix-black/20 z-10"></div>
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center scale-105 blur-[3px] opacity-30"></div>
+        <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-netflix-black/60 to-netflix-black z-10"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center scale-110 blur-[1px] opacity-40 animate-pulse-slow"></div>
 
           <div className="relative z-20 max-w-6xl mx-auto text-center px-6">
-            <h1 className="font-bebas text-7xl md:text-9xl mb-4 tracking-tighter text-white drop-shadow-2xl animate-fade-in">
-              BIGGER. BETTER. <span className="text-netflix-red">GETFLIX.</span>
+            <h1 className="font-bebas text-8xl md:text-[10rem] mb-2 tracking-tighter text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] animate-fade-in leading-none">
+              GETFLIX
             </h1>
-            <p className="text-xl md:text-2xl mb-10 text-gray-300 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-lg">
-              The future of movie matching is here. Connect, swipe, and find your next obsession in seconds.
+            <p className="text-xl md:text-3xl mb-12 text-gray-200 max-w-3xl mx-auto font-black uppercase tracking-[0.2em] drop-shadow-lg">
+              Next-Gen Movie Matching
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <Link
                 href="/match"
-                className="bg-netflix-red text-white font-black px-12 py-5 rounded-full text-xl hover:bg-netflix-red-dark transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(229,9,20,0.6)] uppercase tracking-tight"
+                className="bg-netflix-red text-white font-black px-14 py-6 rounded-full text-2xl hover:bg-netflix-red-dark transition-all duration-500 hover:scale-110 shadow-[0_0_50px_rgba(229,9,20,0.7)] uppercase tracking-tighter"
               >
                 🎬 Start Matching
               </Link>
               <Link
                 href="#trending"
-                className="bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold px-12 py-5 rounded-full text-xl hover:bg-white/20 transition-all duration-300 uppercase tracking-tight flex items-center justify-center"
+                className="bg-white/5 backdrop-blur-xl text-white border border-white/20 font-black px-14 py-6 rounded-full text-2xl hover:bg-white/10 transition-all duration-500 uppercase tracking-tighter flex items-center justify-center"
               >
-                Explore Movies
+                Explore
               </Link>
             </div>
           </div>
         </section>
 
+        {/* Movies Section Transition Overlay */}
+        <div className="h-32 bg-gradient-to-t from-netflix-black to-transparent -mt-32 relative z-10"></div>
+
         {/* Movies Section */}
-        <section id="trending" className="max-w-[1800px] mx-auto px-6 py-12 relative z-20 -mt-20">
+        <section id="trending" className="max-w-[1800px] mx-auto px-6 py-20 relative z-20 bg-netflix-black">
           {!searchQuery && (
-            <div className="pb-8">
-              <h2 className="text-4xl font-bebas tracking-wide text-white mb-2">
+            <div className="pb-12 text-center">
+              <h2 className="text-6xl font-bebas tracking-tighter text-white mb-4">
                 Trending Now
               </h2>
-              <div className="w-24 h-1.5 bg-netflix-red rounded-full"></div>
+              <div className="w-24 h-2 bg-netflix-red mx-auto rounded-full shadow-[0_0_15px_rgba(229,9,20,0.8)]"></div>
             </div>
           )}
           <MovieGrid movies={moviesData.results} />

@@ -109,14 +109,14 @@ export default function CreateSessionPage() {
                                     <button
                                         key={r.id}
                                         onClick={() => setRegion(r.id as any)}
-                                        className={`group relative p-6 rounded-2xl border transition-all duration-500 overflow-hidden ${region === r.id
-                                                ? "border-netflix-red bg-netflix-red/10 animate-pulse-slow shadow-[0_0_20px_rgba(229,9,20,0.2)]"
-                                                : "border-white/10 bg-white/5 hover:bg-white/10"
+                                        className={`group relative p-6 rounded-2xl transition-all duration-300 overflow-hidden ${region === r.id
+                                            ? "border border-netflix-red bg-netflix-red/5 shadow-[0_0_40px_rgba(229,9,20,0.6),0_0_10px_rgba(229,9,20,0.8)]"
+                                            : "border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20"
                                             }`}
                                     >
                                         <div className="relative z-10 flex flex-col items-center gap-3">
                                             <span className="text-4xl filter drop-shadow-md">{r.icon}</span>
-                                            <span className={`font-bold tracking-wide ${region === r.id ? "text-netflix-red" : "text-gray-400 group-hover:text-white"}`}>
+                                            <span className={`font-black tracking-wide ${region === r.id ? "text-netflix-red" : "text-gray-400 group-hover:text-white"}`}>
                                                 {r.label}
                                             </span>
                                         </div>
@@ -140,9 +140,9 @@ export default function CreateSessionPage() {
                                     <button
                                         key={t.id}
                                         onClick={() => setTimeframe(t.id as any)}
-                                        className={`group p-6 rounded-2xl border text-left transition-all duration-300 ${timeframe === t.id
-                                                ? "border-netflix-red bg-netflix-red/10"
-                                                : "border-white/10 bg-white/5 hover:bg-white/10"
+                                        className={`group p-6 rounded-2xl text-left transition-all duration-300 ${timeframe === t.id
+                                            ? "border border-netflix-red bg-netflix-red/5 shadow-[0_0_40px_rgba(229,9,20,0.6),0_0_10px_rgba(229,9,20,0.8)]"
+                                            : "border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20"
                                             }`}
                                     >
                                         <div className={`font-black text-xl mb-1 ${timeframe === t.id ? "text-netflix-red" : "text-white"}`}>
@@ -165,9 +165,9 @@ export default function CreateSessionPage() {
                                     <button
                                         key={genre.id}
                                         onClick={() => toggleGenre(genre.id)}
-                                        className={`px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 border ${selectedGenres.includes(genre.id)
-                                                ? "bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-                                                : "bg-white/5 border-white/10 hover:border-white/30 text-gray-400 hover:text-white"
+                                        className={`px-6 py-3 rounded-xl text-sm font-black transition-all duration-200 ${selectedGenres.includes(genre.id)
+                                            ? "bg-netflix-red/5 text-white border border-netflix-red shadow-[0_0_30px_rgba(229,9,20,0.6),0_0_8px_rgba(229,9,20,0.9)]"
+                                            : "bg-white/5 border border-white/10 hover:border-white/30 text-gray-400 hover:text-white"
                                             }`}
                                     >
                                         {genre.name}
