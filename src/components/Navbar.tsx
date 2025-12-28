@@ -11,11 +11,11 @@ export function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="inline-block group relative">
                     <Image
-                        src="/getflix-logo.png"
+                        src="https://i.ibb.co/rKKqZ2yt/getflix-logo.png"
                         alt="GETFLIX"
-                        width={120}
-                        height={40}
-                        className="h-8 md:h-10 w-auto transform group-hover:scale-110 transition-transform duration-500"
+                        width={160}
+                        height={50}
+                        className="h-10 md:h-12 w-auto transform group-hover:scale-110 transition-transform duration-500"
                         priority
                     />
                 </Link>
